@@ -16,11 +16,18 @@ public class InitiateSeedService {
 	@Autowired
 	RediSearchService seedRediSearch;
 
-	@PostConstruct
-    private void initSeedForIndexing() throws ParseException {
-        logger.info("Indexing the fake users");
-        seedRediSearch.createSearchableIndexUsers();
-        logger.info("Priming the suggestions");
-        seedRediSearch.primeSuggestions();
-    }
+		@PostConstruct
+	    private void initSeedForIndexing() throws ParseException {
+			long startTime = System.nanoTime();
+	        logger.info("Indexing the fake users");
+	        seedRediSearch.createSearchableIndexUsers();
+	        long indexTime   = System.nanoTime();
+	        double seconds = (double)(indexTime - startTime)/1000000000.0;
+	        logger.info("Completed indexing in " + seconds + " seconds!");
+	        logger.info("Priming the suggestions");
+	        seedRediSearch.primeSuggestions();
+	        long suggestionTime   = System.nanoTime();
+	        double suggestionSeconds = (double)(suggestionTime - indexTime)/1000000000.0;
+	        logger.info("Completed suggestion building in " + suggestionSeconds + " seconds!");
+	    }
 }

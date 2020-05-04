@@ -48,7 +48,7 @@ public class UserFakerController {
 		final Date dateObjFrom = sdf.parse("2001-01-01T01:37:56");
 		final Date dateObjTo = sdf.parse("2020-03-31T01:37:56");
 		
-		for (int i = 0; i < 500; i++) {
+		for (int i = 0; i < 2000; i++) {
 			User user = new User(faker.idNumber().ssnValid(),
 					faker.name().username(),
 					faker.name().firstName(),
@@ -60,7 +60,6 @@ public class UserFakerController {
 					faker.internet().emailAddress(),
 					faker.internet().url(),
 					faker.avatar().image(),
-//					"https://source.unsplash.com/random/200x200?person&sig=" + faker.random().nextInt(1, 1000),
 					faker.company().catchPhrase(),
 					faker.internet().password(),
 					faker.date().between(dateObjFrom, dateObjTo).toString());
