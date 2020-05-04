@@ -6,7 +6,7 @@ ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 COPY target/classes /app
 
-ENV REDIS_HOST="10.204.102.131" \
+ENV REDIS_HOST="localhost" \
     REDIS_PORT="6379"
     
 EXPOSE 9090
