@@ -25,3 +25,7 @@ You can follow the below mentioned simple steps to run this app
 **Build this app using docker:**
 
 ``` docker run -d -p 9090:9090 -e REDIS_HOST={REDIS_HOST} -e REDIS_PORT={REDIS_PORT} -t user-profile-app:latest```
+
+## See it in action
+
+![demo](https://cdn.hashnode.com/res/hashnode/image/upload/v1588610976842/zAfN_xg98.gif)
