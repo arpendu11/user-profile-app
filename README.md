@@ -6,6 +6,10 @@ I was looking for lightweight Data-structure which can solve the use-case of ind
 
 With the help of Spring Boot, Thymeleaf and use of [JRedisearch](https://github.com/RediSearch/JRediSearch) library, I was able to create a simple yet high performant searching App.
 
+## Explanation
+
+[Indexed Full-Text searching made easy](https://arpendu.hashnode.dev/indexed-full-text-searching-made-easy-ck9sq2w3j013k6es14f9jlns5)
+
 ## Instructions
 
 You can follow the below mentioned simple steps to run this app
